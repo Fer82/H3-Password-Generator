@@ -5,16 +5,16 @@ var allowUpperCase = false;
 var allowLowerCase = false;
 var allowNumbers = false;
 var allowSpecialChars = false;
-var upperCaseArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var upperCaseArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var lowerCaseArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var numbersArray = [1,2,3,4,5,6,7,8,9,0];
+var numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 var specialCharArrays = ['!', '@', '#', '$', '%', '^', '&', '*', '?', '<', '>', '(', ')', '-', '.', '=', '+', '_', '[', ']', '{', '}', '/', '|', '`', '~', ':', ';'];
 var passwordCharacters = [];
 var newPassword;
 // function combines two arrays together and return a new array
 function combineArrays(arr1, arr2) {
   var newArray = arr1;
-  for (var i=0; i < arr2.length; i++) {
+  for (var i = 0; i < arr2.length; i++) {
     newArray.push(arr2[i]);
   }
   return newArray;
@@ -70,7 +70,7 @@ function generatePassword() {
   var randomIndex;
   newPassword = '';
 
-  for (var i=0; i < passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     randomIndex = getRandomIndex(passwordCharacters.length);
     // concatenate the character to a string variable. Every time
     // a new character is selected, append it to this string variable
@@ -89,7 +89,7 @@ function writePassword() {
   getPasswordLength();
   // Keep prompting the user for the password length until the
   // value specified is between 8 - 128 characters
-  while( (passwordLength < 8) || (passwordLength > 128) ) {
+  while ((passwordLength < 8) || (passwordLength > 128)) {
     alert('Password length must be between 8 to 128 characters');
     getPasswordLength();
   }
